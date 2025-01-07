@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6pcc52hbj5rn"]
+
+[ext_resource type="Script" path="res://GodotUtils/compass_3d.gd" id="1_c8dd0"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_8evyy"]
+radius = 0.05
+height = 0.75
+
+[sub_resource type="TorusMesh" id="TorusMesh_u72ue"]
+inner_radius = 0.9
+
+[node name="Compass3D" type="Node3D"]
+script = ExtResource("1_c8dd0")
+
+[node name="NeedleMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.91069e-15, -4.37114e-08, -1, -1, -4.37114e-08, 0, -4.37114e-08, 1, -4.37114e-08, 0, 0, 0.478205)
+mesh = SubResource("CapsuleMesh_8evyy")
+
+[node name="BodyMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.836707, 0, -0.547651, 0, 1, 0, 0.547651, 0, -0.836707, 0, 0, 0)
+mesh = SubResource("TorusMesh_u72ue")
